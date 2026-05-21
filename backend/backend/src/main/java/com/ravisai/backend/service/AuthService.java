@@ -1,5 +1,6 @@
 package com.ravisai.backend.service;
 
+import com.ravisai.backend.dto.LoginRequest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -35,5 +36,17 @@ public class AuthService {
         userRepository.save(user);
 
         return "User registered successfully";
+    }
+
+    //Login
+    public String login(LoginRequest request){
+        User user =userRepository.findByEmail(request.getEmail()).orElse(null);
+        if(user==null) {
+            return "Invalid email";
+        }
+        if(!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            return "Invalid password";
+        }
+        return "Login successful";
     }
 }

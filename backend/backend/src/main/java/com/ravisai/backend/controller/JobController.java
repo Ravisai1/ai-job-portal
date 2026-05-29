@@ -6,6 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/jobs")
@@ -27,5 +28,14 @@ public class JobController {
     @GetMapping("/getjobs")
     public List<Job> getJobs() {
         return jobService.getJobs();
+    }
+
+    @GetMapping("{id}")
+    public Optional<Job> getJobById(@PathVariable long id) {
+        return jobService.getJobById(id);
+    }
+    @DeleteMapping("{id}")
+    public String deleteJob(@PathVariable long id) {
+        return jobService.deleteJob(id);
     }
 }

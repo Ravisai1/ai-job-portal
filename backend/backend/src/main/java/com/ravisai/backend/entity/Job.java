@@ -2,6 +2,7 @@ package com.ravisai.backend.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 @Entity
@@ -18,6 +19,7 @@ public class Job {
     private double salary;
     private String description;
     private String createdBy;
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
 }

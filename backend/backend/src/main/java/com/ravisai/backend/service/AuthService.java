@@ -1,6 +1,7 @@
 package com.ravisai.backend.service;
 
 import com.ravisai.backend.dto.LoginRequest;
+import com.ravisai.backend.jwt.jwtservice;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +14,12 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final jwtservice jwtService;
 
-    public AuthService(UserRepository userRepository,PasswordEncoder passwordEncoder) {
+    public AuthService(UserRepository userRepository,PasswordEncoder passwordEncoder,jwtservice jwtservice) {
         this.userRepository = userRepository;
         this.passwordEncoder=passwordEncoder;
+        this.jwtService = jwtservice;
     }
 
     public String register(RegisterRequest request) {
@@ -47,6 +50,7 @@ public class AuthService {
         if(!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             return "Invalid password";
         }
-        return "Login successful";
+        String token = jwtService.generateToken(user.getEmail());
+        return token;
     }
 }

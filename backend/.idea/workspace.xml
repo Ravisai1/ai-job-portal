@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef4da64-cdad-4116-a8b3-21af7a6f0227" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/ApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/dto/StatusUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/entity/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/repository/ApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/ApplicationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/entity/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/JobController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Job.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/filter/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/filter/JwtFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/jwt/jwtservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/jwt/jwtservice.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

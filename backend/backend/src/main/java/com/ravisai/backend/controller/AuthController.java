@@ -1,15 +1,12 @@
 package com.ravisai.backend.controller;
 
 import com.ravisai.backend.dto.LoginRequest;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ravisai.backend.dto.RegisterRequest;
 import com.ravisai.backend.service.AuthService;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

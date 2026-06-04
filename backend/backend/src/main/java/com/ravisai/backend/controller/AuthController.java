@@ -1,6 +1,7 @@
 package com.ravisai.backend.controller;
 
 import com.ravisai.backend.dto.LoginRequest;
+import com.ravisai.backend.dto.LoginResponse;
 import org.springframework.web.bind.annotation.*;
 
 import com.ravisai.backend.dto.RegisterRequest;
@@ -24,7 +25,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequest request) {
+    public LoginResponse login(@RequestBody LoginRequest request) {
         return authService.login(request);
     }
 }

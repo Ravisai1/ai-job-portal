@@ -25,6 +25,17 @@ public class JobController {
         return jobService.addJob(job);
     }
 
+    @GetMapping("/my")
+    public List<Job> getJobsByCreatedBy() {
+        System.out.println("getJobsByCreatedBy");
+        String email=
+                SecurityContextHolder.getContext()
+                        .getAuthentication()
+                        .getName();
+        return jobService.getJobsByCreatedBy(email);
+    }
+
+
     @GetMapping("/getjobs")
     public List<Job> getJobs() {
         return jobService.getJobs();

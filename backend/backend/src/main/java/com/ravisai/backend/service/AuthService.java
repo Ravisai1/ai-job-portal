@@ -1,6 +1,7 @@
 package com.ravisai.backend.service;
 
 import com.ravisai.backend.dto.LoginRequest;
+import com.ravisai.backend.dto.LoginResponse;
 import com.ravisai.backend.jwt.jwtservice;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,7 @@ public class AuthService {
         user.setName(request.getName());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRole("USER");
+        user.setRole(request.getRole());
 
         userRepository.save(user);
 
@@ -42,15 +43,27 @@ public class AuthService {
     }
 
     //Login
-    public String login(LoginRequest request){
-        User user =userRepository.findByEmail(request.getEmail()).orElse(null);
-        if(user==null) {
-            return "Invalid email";
+    public LoginResponse login(LoginRequest request) {
+
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElse(null);
+
+        if(user == null){
+            throw new RuntimeException("Invalid email");
         }
-        if(!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-            return "Invalid password";
+
+        if(!passwordEncoder.matches(
+                request.getPassword(),
+                user.getPassword())){
+            throw new RuntimeException("Invalid password");
         }
+
         String token = jwtService.generateToken(user.getEmail());
-        return token;
+        String role = user.getRole();
+
+        return new LoginResponse(
+                token,
+                role
+        );
     }
 }

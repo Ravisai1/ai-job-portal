@@ -5,40 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aef4da64-cdad-4116-a8b3-21af7a6f0227" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/dto/LoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/BackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/BackendApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/config/PasswordConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/config/PasswordConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/dto/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/repository/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/repository/JobRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/ravisai/backend/service/JobService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/ApplicationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/ApplicationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/controller/JobController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/LoginRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/StatusUpdateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/dto/StatusUpdateRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/Job.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/filter/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/filter/JwtFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/jwt/jwtservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/jwt/jwtservice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/ApplicationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/ApplicationRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/JobRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/JobRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/ApplicationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/ApplicationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/AuthService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/ravisai/backend/service/JobService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/assets/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Api/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/types/Application.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/types/Application.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/types/Job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/types/Job.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,21 +62,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.Unnamed.executor": "Run",
-    "git-widget-placeholder": "Merging main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="backend" />

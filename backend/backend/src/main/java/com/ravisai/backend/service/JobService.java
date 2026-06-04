@@ -22,6 +22,10 @@ public class JobService {
     public List<Job> getJobs() {
         return jobRepository.findAll();
     }
+
+    public List<Job> getJobsByCreatedBy(String createdBy) {
+        return jobRepository.findByCreatedBy(createdBy);
+    }
       
     public Optional<Job> getJobById(long id) {
         return jobRepository.findById(id);

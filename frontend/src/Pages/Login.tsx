@@ -6,6 +6,8 @@ import {
   CardContent,
   TextField,
   Container,
+  Alert,
+  Snackbar,
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +17,12 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+  const [message, setMassage] = useState("");
+  const [severity, setSeverity] = useState<
+    "success" | "error" | "warning" | "info"
+  >("success");
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,98 +42,123 @@ const Login: React.FC = () => {
           ? navigate("/Dashboard")
           : navigate("/jobs");
 
-        alert("Login Successfully");
+        // alert("Login Successfully");
+        setEmail("Login Successfully");
+        setSeverity("success");
+        setOpen(true);
       }
     } catch (error) {
       console.error(error);
-      alert("Invalid Credentials");
+      // alert("Invalid Credentials");
+      setMassage("Invalid Credentials");
+      setSeverity("error");
+      setOpen(true);
     }
   };
 
   return (
-    <Container maxWidth="sm">
-      <Box
-        sx={{
-          minHeight: "100vh",
-          background: "linear-gradient(to right, #2196f3, #21cbf3)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Card
+    <>
+      <Container maxWidth="sm">
+        <Box
           sx={{
-            width: "100%",
-            p: 2,
-            borderRadius: 3,
-            boxShadow: 5,
+            minHeight: "100vh",
+            background: "linear-gradient(to right, #2196f3, #21cbf3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <CardContent>
-            <Typography
-              variant="h4"
-              align="center"
-              gutterBottom
-              style={{ fontWeight: "bold" }}
-            >
-              Login
-            </Typography>
-
-            <Typography
-              variant="body2"
-              align="center"
-              color="text.secondary"
-              style={{ marginBottom: 3 }}
-            >
-              Welcome back! Please login to continue.
-            </Typography>
-
-            <Box
-              component="form"
-              onSubmit={handleLogin}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 2,
-              }}
-            >
-              <TextField
-                label="Email"
-                type="email"
-                fullWidth
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-
-              <TextField
-                label="Password"
-                type="password"
-                fullWidth
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-
-              <Button
-                type="submit"
-                variant="contained"
-                size="large"
-                sx={{
-                  mt: 2,
-                  py: 1.5,
-                  borderRadius: 2,
-                  textTransform: "none",
-                  fontSize: "16px",
-                }}
+          <Card
+            sx={{
+              width: "100%",
+              p: 2,
+              borderRadius: 3,
+              boxShadow: 5,
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h4"
+                align="center"
+                gutterBottom
+                style={{ fontWeight: "bold" }}
               >
                 Login
-              </Button>
-            </Box>
-          </CardContent>
-        </Card>
-      </Box>
-    </Container>
+              </Typography>
+
+              <Typography
+                variant="body2"
+                align="center"
+                color="text.secondary"
+                style={{ marginBottom: 3 }}
+              >
+                Welcome back! Please login to continue.
+              </Typography>
+
+              <Box
+                component="form"
+                onSubmit={handleLogin}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 2,
+                }}
+              >
+                <TextField
+                  label="Email"
+                  type="email"
+                  fullWidth
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+
+                <TextField
+                  label="Password"
+                  type="password"
+                  fullWidth
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    mt: 2,
+                    py: 1.5,
+                    borderRadius: 2,
+                    textTransform: "none",
+                    fontSize: "16px",
+                  }}
+                >
+                  Login
+                </Button>
+              </Box>
+            </CardContent>
+          </Card>
+        </Box>
+      </Container>
+      <Snackbar
+        open={open}
+        autoHideDuration={3000}
+        onClose={() => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+      >
+        <Alert
+          onClose={() => setOpen(false)}
+          severity={severity}
+          variant="filled"
+        >
+          {message}
+        </Alert>
+      </Snackbar>
+    </>
   );
 };
 

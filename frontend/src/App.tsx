@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Jobs from "./Pages/Jobs";
 import MyApplications from "./Pages/MyApplications";
@@ -10,11 +10,16 @@ import Applicants from "./Pages/Applicants";
 import Dashboard from "./Pages/Dashboard";
 
 function App() {
+  const location=useLocation();
+  const hideNavbar =
+    location.pathname === "/" ||
+    location.pathname === "/register" || location.pathname === "/login"
+    
   return (
     <>
-      <Navbar />
+       {!hideNavbar && <Navbar />}
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Login />} />
         <Route
           path="/jobs"
           element={

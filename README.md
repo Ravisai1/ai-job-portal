@@ -1,10 +1,50 @@
-# AI Job Portal Backend
+# AI Job Portal
 
 ## Overview
 
-AI Job Portal Backend is a Spring Boot application that provides secure authentication and job management functionality. The project uses JWT-based authentication, Spring Security, PostgreSQL, and Spring Data JPA.
+AI Job Portal is a full-stack web application that enables Users and Recruiters to manage the job application process efficiently.
 
-The application allows users to register, login, create jobs, apply for jobs, track applications, and manage application statuses.
+The application provides secure JWT-based authentication, role-based access, job management, application tracking, recruiter dashboards, and application status management.
+
+Built using Spring Boot, React, TypeScript, PostgreSQL, Spring Security, and Material UI.
+
+---
+
+## Features
+
+### Authentication & Security
+
+* User Login
+* JWT Authentication
+* Password Encryption using BCrypt
+* Protected REST APIs
+* Protected Frontend Routes
+* Role-Based UI (User / Recruiter)
+
+### Job Management
+
+* Create Job
+* View All Jobs
+* View Job Details
+* Update Job
+* Delete Job
+* Track Job Creator
+
+### Application Management
+
+* Apply for Jobs
+* Prevent Duplicate Applications
+* View My Applications
+* Track Application Status
+* View Applicants for a Job
+* Update Applicant Status
+
+### Recruiter Dashboard
+
+* View Created Jobs
+* View Applicants
+* Manage Application Status
+* Recruiter-Specific Navigation
 
 ---
 
@@ -20,52 +60,38 @@ The application allows users to register, login, create jobs, apply for jobs, tr
 * JWT Authentication
 * Maven
 
+### Frontend
+
+* React
+* TypeScript
+* Axios
+* React Router DOM
+* Material UI
+
 ### Database
 
 * PostgreSQL
 
 ### Tools
 
-* Postman
 * Git
 * GitHub
-
----
-
-## Features
-
-### Authentication Module
-
-* User Registration
-* User Login
-* Password Encryption using BCrypt
-* JWT Token Generation
-* JWT Token Validation
-* Protected APIs using Spring Security
-
-### Job Management Module
-
-* Create Job
-* Get All Jobs
-* Get Job By ID
-* Update Job
-* Delete Job
-* Automatically store creator information using authenticated JWT user
-
-### Application Management Module
-
-* Apply for Jobs
-* Prevent Duplicate Applications
-* View My Applications
-* View Applications By Job ID
-* Update Application Status
-* Track Application History
+* Postman
+* VS Code
 
 ---
 
 ## Project Architecture
 
-Controller Layer
+Frontend (React + TypeScript)
+
+↓
+
+REST APIs
+
+↓
+
+Spring Boot Backend
 
 ↓
 
@@ -91,7 +117,11 @@ JWT Token Generated
 
 ↓
 
-Client Sends Token
+Token Stored In Browser
+
+↓
+
+Token Sent With Requests
 
 ↓
 
@@ -111,55 +141,31 @@ Protected APIs Accessible
 
 ### Authentication APIs
 
-#### Register User
-
 POST /api/auth/register
-
-#### Login User
 
 POST /api/auth/login
 
----
-
 ### Job APIs
-
-#### Create Job
 
 POST /api/jobs/addjobs
 
-#### Get All Jobs
-
 GET /api/jobs/getjobs
-
-#### Get Job By ID
 
 GET /api/jobs/{id}
 
-#### Update Job
-
 PUT /api/jobs/{id}
-
-#### Delete Job
 
 DELETE /api/jobs/{id}
 
----
+GET /api/jobs/my
 
 ### Application APIs
 
-#### Apply For Job
-
 POST /api/applications/{jobId}/apply
-
-#### Get My Applications
 
 GET /api/applications/getApplicationsByEmail
 
-#### Get Applications By Job
-
 GET /api/applications/job/{jobId}
-
-#### Update Application Status
 
 PUT /api/applications/{id}/status
 
@@ -173,6 +179,7 @@ PUT /api/applications/{id}/status
 * name
 * email
 * password
+* role
 
 ### Job
 
@@ -195,39 +202,60 @@ PUT /api/applications/{id}/status
 
 ---
 
+## Screenshots
+
+* Login Page
+* Jobs Page
+* Job Details
+* My Applications
+* Create Job
+* Recruiter Dashboard
+* Applicants Page
+
+---
+
 ## How To Run
 
 ### Clone Repository
 
-git clone repository-url>](https://github.com/Ravisai1/ai-job-portal.git
+git clone https://github.com/Ravisai1/ai-job-portal.git
 
-### Navigate To Project
+### Backend
 
 cd backend
 
-### Configure Database
-
-Update application.properties with PostgreSQL credentials.
-
-### Run Application
+Configure PostgreSQL credentials in application.properties
 
 mvn spring-boot:run
 
-### Access APIs
+### Frontend
 
+cd frontend
+
+npm install
+
+npm run dev
+
+### Access Application
+
+Backend:
 http://localhost:8080
+
+Frontend:
+http://localhost:5173
 
 ---
 
 ## Future Enhancements
 
-* React Frontend Integration
-* Role-Based Access Control (Admin, Recruiter, User)
-* Resume Upload Feature
-* AI Resume Matching
+* Resume Upload
+* Search and Filtering
+* Pagination
 * Email Notifications
-* Pagination and Search
+* AI Resume Matching
 * Dashboard Analytics
+* Application Tracking Timeline
+* Cloud Deployment
 
 ---
 
